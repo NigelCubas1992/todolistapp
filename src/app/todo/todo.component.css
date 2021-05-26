@@ -1,0 +1,28 @@
+.mat-form-field{
+    background-color: rgba(240, 21, 21, 0.596);
+    font-size: 16px;
+    text-align: center;
+}
+
+.button{
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.background{
+    background-color: blue;
+}
+
+.body{ 
+    color: rgb(14, 13, 13); 
+}
+
+.header {
+    background-color: yellow;
+}
+
+.tamaño {
+    font-size: 50px;
+}

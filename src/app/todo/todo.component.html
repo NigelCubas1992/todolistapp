@@ -1,0 +1,85 @@
+<link rel=styleSheet href="todo.component.css" type="text/css">
+<div class="header" style="padding:45px 0px">
+    <h4 class="text-center">APP TO DO LIST</h4>
+</div>
+<div class="container py-5">
+  <div class="input-group">
+    <input title="form" type="text" class="form-control" placeholder="Añadir Tarea" #itemTitle >
+    <button mat-flat-button class="pull-right" (click)="addTask(itemTitle)">
+      <mat-icon>add_circle</mat-icon>
+    </button>
+  </div>
+  <br>
+  <div class="text-center">
+    <h3 class="tamaño">LISTA DE TAREAS</h3>
+  </div>
+  <div class="button">
+    <button type="button" class="btn btn-primary body btn-sm button" (click)="orderbyName()">POR NOMBRE</button>
+    <button type="button" class="btn btn-primary body btn-sm button" (click)="orderbyDate()">POR FECHA</button>
+    <button type="button" class="btn btn-primary body btn-sm button" (click)="orderbyPriority()">POR ESTADO</button>
+  </div>
+  <br>
+  <div>
+      <mat-list class="list-group-item" *ngFor="let item of toDoListArray">
+        <div *ngIf = "item.isChecked == 0">
+          <span class="hover-cursor" [class.text-success]="item.isChecked" (click)="toCheck(item.$key,item.isChecked,item)">
+            <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
+          </span>
+          {{item.title}}
+          <span class="hover-cursor text-black-50 pull-right" (click)="removeTask(item.$key)">
+            <mat-icon mat-list-icon>delete_sweep</mat-icon>        
+          </span>
+          <input title="form" type="text" class="pul" placeholder="Editar" #itemTitle >
+          <button class="hover-cursor text-black-50" (click)="editTask(item.$key,item,itemTitle)">
+            <mat-icon mat-flat-button>check_circle_outline</mat-icon> 
+          </button>
+        </div>
+        <div *ngIf = "item.isChecked == 1">
+          <span class="hover-cursor" [class.text-success]="item.isChecked" (click)="toCheck(item.$key,item.isChecked,item)">
+            <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
+          </span>
+          {{item.title}}
+          <span class="hover-cursor text-black-50 pull-right" (click)="removeTask(item.$key)">
+            <mat-icon mat-list-icon>delete_sweep</mat-icon>        
+          </span>
+        </div>
+        <div *ngIf = "item.isChecked == 2">
+          <span class="hover-cursor" [class.text-success]="item.isChecked" (click)="toCheck(item.$key,item.isChecked,item)">
+            <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
+          </span>
+          {{item.title}}
+          <span class="hover-cursor text-black-50 pull-right" (click)="removeTask(item.$key)">
+            <mat-icon mat-list-icon>delete_sweep</mat-icon>        
+          </span>
+        </div>
+      </mat-list>
+  </div>
+  <br>
+  
+  <br>
+  <div class="btn-lg text-lg-center">
+    <button type="button" class="btn btn-secondary body" (click)="removeAllTask()">BORRAR TODAS LAS TAREAS</button>
+  </div>
+  <br>
+  <div class="text-center">
+    <h3>HISTÓRICO DE TAREAS</h3>
+  </div>
+  <br>
+  <div class="button">
+    <button type="button" class="btn btn-primary body btn-sm button" (click)="orderTasksbyNameDone()">POR NOMBRE</button>
+    <button type="button" class="btn btn-primary body btn-sm button" (click)="orderTasksbyDateDone()">POR FECHA</button>
+    
+  </div>
+  <br>
+  <div style="margin:5px 0px">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of toDoListArrayDone">
+          {{item.title}}
+      </li>
+    </ul>
+  </div>
+  <br>
+  <div class="btn-lg text-lg-center">
+    <button type="button" class="btn btn-secondary body" (click)="removeAllTaskDone()">BORRAR TODO EL HISTORIAL</button>
+  </div>
+</div>
