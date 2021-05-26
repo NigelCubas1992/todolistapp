@@ -3,5 +3,5 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .bg-yellow{
-    background-color: rgb(9, 247, 29);
+    background-color: rgba(241, 173, 224, 0.493);
 }

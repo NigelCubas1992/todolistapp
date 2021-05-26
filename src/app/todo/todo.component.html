@@ -1,6 +1,6 @@
 <link rel=styleSheet href="todo.component.css" type="text/css">
 <div class="header" style="padding:45px 0px">
-    <h4 class="text-center">APP TO DO LIST</h4>
+    <h4 class="text-center tamaño">APP TO DO LIST</h4>
 </div>
 <div class="container py-5">
   <div class="input-group">
@@ -10,14 +10,17 @@
     </button>
   </div>
   <br>
+  <br>
   <div class="text-center">
     <h3 class="tamaño">LISTA DE TAREAS</h3>
   </div>
+  <br>
   <div class="button">
-    <button type="button" class="btn btn-primary body btn-sm button" (click)="orderbyName()">POR NOMBRE</button>
-    <button type="button" class="btn btn-primary body btn-sm button" (click)="orderbyDate()">POR FECHA</button>
-    <button type="button" class="btn btn-primary body btn-sm button" (click)="orderbyPriority()">POR ESTADO</button>
+    <button type="button" class="btn btn-warning body btn-sm button" (click)="orderbyName()">POR NOMBRE</button>
+    <button type="button" class="btn btn-warning body btn-sm button" (click)="orderbyDate()">POR FECHA</button>
+    <button type="button" class="btn btn-warning body btn-sm button" (click)="orderbyPriority()">POR ESTADO</button>
   </div>
+  <br>
   <br>
   <div>
       <mat-list class="list-group-item" *ngFor="let item of toDoListArray">
@@ -58,17 +61,17 @@
   
   <br>
   <div class="btn-lg text-lg-center">
-    <button type="button" class="btn btn-secondary body" (click)="removeAllTask()">BORRAR TODAS LAS TAREAS</button>
+    <button type="button" class="btn btn-info body" (click)="removeAllTask()">BORRAR TODAS LAS TAREAS</button>
   </div>
   <br>
+  <br>
   <div class="text-center">
-    <h3>HISTÓRICO DE TAREAS</h3>
+    <h3 class="tamaño">HISTÓRICO DE TAREAS</h3>
   </div>
   <br>
   <div class="button">
-    <button type="button" class="btn btn-primary body btn-sm button" (click)="orderTasksbyNameDone()">POR NOMBRE</button>
-    <button type="button" class="btn btn-primary body btn-sm button" (click)="orderTasksbyDateDone()">POR FECHA</button>
-    
+    <button type="button" class="btn btn-success body btn-sm button" (click)="orderTasksbyNameDone()">POR NOMBRE</button>
+    <button type="button" class="btn btn-success body btn-sm button" (click)="orderTasksbyDateDone()">POR FECHA</button>
   </div>
   <br>
   <div style="margin:5px 0px">
@@ -80,6 +83,6 @@
   </div>
   <br>
   <div class="btn-lg text-lg-center">
-    <button type="button" class="btn btn-secondary body" (click)="removeAllTaskDone()">BORRAR TODO EL HISTORIAL</button>
+    <button type="button" class="btn btn-info body" (click)="removeAllTaskDone()">BORRAR TODO EL HISTORIAL</button>
   </div>
 </div>
