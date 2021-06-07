@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Características Técnicas de la app:
+
+Herramientas utilizadas: 
+
+1) Firebase 
+2) Las librerías de Angular
+3) Node.js
+4) AngularCLI
+
+El component:
+
+El CSS contiene el estilo de la todolist.
+El HTML contiene lo que se muestra en la app.
+El .ts contiene todo los métodos que hacen llamadas a la base de datos y los metodos que cambian el estado de la task.
+El service.ts es donde hago las operaciones crud de las tareas, los métodos de ordenar y establecer la conexión con FireBase.
+El archivo app.module.ts es donde realizo las importaciones de Firebase y Angular Materials.
