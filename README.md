@@ -37,8 +37,8 @@ Herramientas utilizadas:
 
 El component:
 
-El CSS contiene el estilo de la todolist.
-El HTML contiene lo que se muestra en la app.
+El CSS contiene los estilos de la todolist.
+El HTML contiene la vista de la app.
 El .ts contiene todo los métodos que hacen llamadas a la base de datos y los metodos que cambian el estado de la task.
-El service.ts es donde hago las operaciones crud de las tareas, los métodos de ordenar y establecer la conexión con FireBase.
-El archivo app.module.ts es donde realizo las importaciones de Firebase y Angular Materials.
+El archivo component.ts es donde hago las operaciones crud de las tareas, los métodos de ordenar y establecer la conexión con FireBase.
+El archivo app.module.ts es donde realizo las importaciones de Firebase y las librerias de Angular.
